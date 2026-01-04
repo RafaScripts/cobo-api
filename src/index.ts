@@ -7,6 +7,8 @@ export {
     WalletCreateResponse, 
     AddressCreateResponse,
     CreateWalletRequest,
-    CreateAddressRequest
+    CreateAddressRequest,
+    CoboWalletType,
+    CoboWalletSubtype
 } from './types';
 export default CoboAPI;

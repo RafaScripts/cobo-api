@@ -50,12 +50,54 @@ export interface AddressCreateResponse {
 }
 
 /**
+- `Custodial`: [Custodial Wallets](https://manuals.cobo.com/en/portal/custodial-wallets/introduction\)
+
+- `MPC`: [MPC Wallets](https://manuals.cobo.com/en/portal/mpc-wallets/introduction\)
+
+- `SmartContract`: [Smart Contract Wallets](https://manuals.cobo.com/en/portal/smart-contract-wallets/introduction\)
+
+- `Exchange`: [Exchange Wallets](https://manuals.cobo.com/en/portal/exchange-wallets/introduction\)
+ */
+export enum CoboWalletType {
+    CUSTODIAL = "Custodial",
+    MPC = "MPC",
+    SMART_CONTRACT = "SmartContract",
+    EXCHANGE = "Exchange"
+}
+
+/**
+- `Asset`: Custodial Wallets (Asset Wallets).
+
+- `Web3`: Custodial Wallets (Web3 Wallets).
+
+- `Org-Controlled`: MPC Wallets (Organization-Controlled Wallets).
+
+- `User-Controlled`: MPC Wallets (User-Controlled Wallets).
+
+- `Safe{Wallet}`: Smart Contract Wallets (Safe).
+
+- `Main`: Exchange Wallets (Main Account).
+
+- `Sub`: Exchange Wallets (Sub Account)
+ */
+
+export enum CoboWalletSubtype {
+    ASSET = "Asset",
+    WEB3 = "Web3",
+    ORG_CONTROLLED = "Org-Controlled",
+    USER_CONTROLLED = "User-Controlled",
+    SAFE_WALLET = "Safe{Wallet}",
+    MAIN = "Main",
+    SUB = "Sub"
+}
+
+/**
  * Create wallet request body
  */
 export interface CreateWalletRequest {
     name: string;
-    wallet_type: string;
-    wallet_subtype: string;
+    wallet_type: CoboWalletType;
+    wallet_subtype: CoboWalletSubtype;
     vault_id: string;
 }
 
