@@ -1,0 +1,38 @@
+{
+  "name": "cobo-api",
+  "version": "1.0.0",
+  "description": "A library for interacting with the Cobo API with Ed25519 signing",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "axios": "^1.13.2",
+    "crypto-js": "^4.2.0",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/cobo-api.git"
+  },
+  "keywords": [
+    "cobo",
+    "api",
+    "wallet",
+    "cryptocurrency",
+    "ed25519"
+  ],
+  "author": "Rafael Santos Freire",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/cobo-api/issues"
+  },
+  "homepage": "https://github.com/yourusername/cobo-api#readme"
+}
