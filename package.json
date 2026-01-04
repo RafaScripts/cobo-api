@@ -1,6 +1,6 @@
 {
   "name": "cobo-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A library for interacting with the Cobo API with Ed25519 signing",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
